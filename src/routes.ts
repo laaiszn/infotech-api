@@ -15,12 +15,16 @@ router.delete("/produtos/:id", Auth.verifyToken, ProdutoController.remover);
 
 router.get("/movimentacoes", Auth.verifyToken, MovimentacaoController.todos);
 router.get("/movimentacoes/:id_movimentacao", Auth.verifyToken, MovimentacaoController.um);
+
+
 router.post("/movimentacoes", Auth.verifyToken, MovimentacaoController.novo);
 
 router.get("/categorias", Auth.verifyToken, CategoriaController.todos);
 router.get("/categorias/:id", Auth.verifyToken, CategoriaController.categoria);
 router.post("/categorias", Auth.verifyToken, CategoriaController.cadastrar);
 router.put("/categorias/:id", Auth.verifyToken, CategoriaController.atualizar);
+
+
 router.delete("/categorias/:id", Auth.verifyToken, CategoriaController.remover);
 
 router.get("/relatorios/reposicao", Auth.verifyToken, RelatorioController.reposicao);
